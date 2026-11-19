@@ -1,0 +1,7 @@
+step,rows_before,rows_after,rows_affected,note
+Loaded 2012-2016 subset,1279312,1279312,0,from Lending Club accepted file
+Drop duplicate loan IDs,1279312,1279312,0,
+Drop rows with invalid issue date,1279312,1279312,0,
+Drop rows with non-positive loan amount or implausible interest rate,1279312,1279312,0,
+Set DTI outside 0-100 to missing,1279312,1279312,136,"loan kept, DTI blanked"
+Fill missing emp_length with 'Unknown',1279312,1279312,71937,
