@@ -291,17 +291,13 @@ Further internal consistency checks on the SQL results:
 
 ## Repository structure
 
-Adjust the names to match your files.
 
 ```
 loan-risk-report/
 ├── README.md
-├── notebooks/
-│   └── loan_cleaning.ipynb
+├── risk_analysis.ipynb
 ├── sql/
 │   └── kpi_queries.sql
-├── dashboard/
-│   └── loan_risk_report.pbix        (or a link, if the file is over 100 MB)
 ├── images/
 │   ├── page1-overview.png
 │   ├── page2-risk-pricing.png
@@ -310,17 +306,9 @@ loan-risk-report/
     └── data_quality_log.csv
 ```
 
-## How to reproduce
-
-1. Download the Lending Club "accepted" loans file from Kaggle and place it in the project folder.
-2. `pip install pandas numpy sqlalchemy pymysql`
-3. Run the notebook cells in order. This writes `loans_2012_2016_raw.csv`, `loans_clean.csv`, `data_quality_log.csv` and `loans_powerbi.csv`, and loads the cleaned data into a MySQL table called `loans` in a database called `loan_risk`.
-4. Run the queries in `sql/kpi_queries.sql` and compare them with the figures above.
-5. Open the Power BI file, or load `loans_powerbi.csv` and rebuild the measures.
-
 ## Tools
 
-Python (pandas, NumPy, SQLAlchemy), MySQL, Power BI (DAX), Excel, GitHub.
+Python, MySQL, Power BI, GitHub.
 
 ## Author
 
